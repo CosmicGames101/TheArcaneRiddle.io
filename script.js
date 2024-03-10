@@ -1,4 +1,4 @@
-function checkAnswer() {
+function checkAnswer(If anyone is able to decipher this text then what you have found the first hint, the first hint is ZXclosure) {
     var answer = document.getElementById("answer").value.toLowerCase();
     var result = document.getElementById("result");
 
