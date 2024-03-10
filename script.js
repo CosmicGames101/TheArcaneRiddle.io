@@ -1,11 +1,33 @@
-function checkAnswer(If anyone is able to decipher this text then what you have found the first hint, the first hint is ZXclosure) {
+// Array of failure messages
+var failureMessages = [
+    "Incorrect. Please quit now.",
+    "That's not quite right. Maybe quit while your ahead?",
+    "Oops, wrong answer. This means you're a noble member!",
+    "Not quite. Give up fodder!",
+    "Incorrect answer. You're close! just kidding you are a noble phantasm member!"
+];
+
+// Function to check the user's answer
+function checkAnswer(hint) {
     var answer = document.getElementById("answer").value.toLowerCase();
     var result = document.getElementById("result");
 
     if (answer === "elephant") {
-        result.textContent = "Correct! You can proceed to the next riddle.";
-        // Add logic to navigate to the next riddle
+        result.textContent = "Correct! this must mean you aren't a noble member meaning no brainrot. Good luck with the riddle!";
+        // Add logic here to navigate to the next riddle
     } else {
-        result.textContent = "Incorrect. Please try again.";
+        // Randomly select a failure message
+        var randomIndex = Math.floor(Math.random() * failureMessages.length);
+        result.textContent = failureMessages[randomIndex];
+        
+        // If hint is provided, display it
+        if (hint) {
+            displayHint(hint);
+        }
     }
+}
+
+// Function to display the hint
+function displayHint(hint) {
+    alert("Hint: " + hint);
 }
