@@ -1,0 +1,1 @@
+im uh using chatgbt to help me make a riddle website, This website entails finding stuff inside the game ARCANE ODYSSEY with the hints and whoever solves the final riddle and sends me the msg for it gets in game items
