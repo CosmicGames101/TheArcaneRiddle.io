@@ -4,7 +4,7 @@ var failureMessages = [
     "That's not quite right. Maybe quit while your ahead?",
     "Oops, wrong answer. This means you're a noble member!",
     "Not quite. Give up fodder!",
-    "Incorrect answer. You're close! just kidding you are a noble phantasm member!"
+    "Incorrect answer. You're close! just kidding you are a noble phantasm member! Sucks to suck"
 ];
 
 // Function to check the user's answer
