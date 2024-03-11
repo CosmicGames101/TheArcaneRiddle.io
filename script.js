@@ -67,9 +67,17 @@ function startTimer() {
     timerActive = true;
     var seconds = 120; // 2 minutes = 120 seconds
 
+    var timerDisplay = document.getElementById("timer");
+
     var timerInterval = setInterval(function () {
+        var minutes = Math.floor(seconds / 60);
+        var remainingSeconds = seconds % 60;
+
+        timerDisplay.textContent = "Time remaining: " + minutes + "m " + remainingSeconds + "s";
+
         seconds--;
-        if (seconds <= 0) {
+
+        if (seconds < 0) {
             clearInterval(timerInterval);
             timerActive = false;
             document.getElementById("result").textContent = "Timer expired. You can now submit an answer.";
