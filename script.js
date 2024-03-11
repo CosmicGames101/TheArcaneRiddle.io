@@ -82,3 +82,17 @@ function startTimer() {
         }
     }, 1000);
 }
+// Function to redirect to homepage after completion of first riddle
+function redirectToHomepage() {
+    setTimeout(function() {
+        window.location.href = "homepage.html"; // Redirect to homepage after 5 seconds
+    }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+// Call this function after the correct answer is provided
+function handleCorrectAnswer() {
+    // Your existing logic for handling correct answer goes here
+    // For example:
+    document.getElementById("result").textContent = "Correct! Redirecting to homepage...";
+    redirectToHomepage(); // Call the function to redirect to homepage
+}
