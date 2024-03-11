@@ -8,12 +8,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Riddle 1</h1>
-    <p>Decipher this Morse code and paste exactly what it means into the answer. This is practice for what is to come:</p>
-    <p>.. ..-. / .- -. -.-- --- -. . / .. ... / .- -... .-.. . / - --- / -.. . -.-. .. .--. .... . .-. / - .... .. ... / - . -..- - / - .... . -. / .-- .... .- - / -.-- --- ..- / .... .- ...- . / ..-. --- ..- -. ..-. .. .-. ... - / .... .. -. - , / - .... . / ..-. .. .-. ... - / .... .. -. - / .. ... / --.. -..- -.-. .-.. --- ... ..- .-.
-    </p>
-    <input type="text" id="answer" placeholder="Your answer">
-    <button onclick="checkAnswer()">Submit Answer</button>
-    <p id="result"></p>
+    <div class="card">
+        <h1>Riddle 1</h1>
+        <p>Decipher this Morse code and paste exactly what it means into the answer. This is practice for what is to come:</p>
+        <p>.. ..-. / .- -. -.-- --- -. . / .. ... / .- -... .-.. . / - --- / -.. . -.-. .. .--. .... . .-. / - .... .. ... / - . -..- - / - .... . -. / .-- .... .- - / -.-- --- ..- / .... .- ...- . / ..-. --- ..- -. ..-. .. .-. ... - / .... .. -. - , / - .... . / ..-. .. .-. ... - / .... .. -. - / .. ... / --.. -..- -.-. .-.. --- ... ..- .-.
+        </p>
+        <input type="text" id="answer" placeholder="Your answer">
+        <button onclick="checkAnswer()">Submit Answer</button>
+        <p id="result"></p>
+        <div id="timer"></div> <!-- Timer display -->
+    </div>
 </body>
 </html>
