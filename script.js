@@ -68,6 +68,7 @@ function startTimer() {
     var seconds = 120; // 2 minutes = 120 seconds
 
     var timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "block"; // Show the timer
 
     var timerInterval = setInterval(function () {
         var minutes = Math.floor(seconds / 60);
