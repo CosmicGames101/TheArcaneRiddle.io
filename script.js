@@ -47,7 +47,7 @@ function checkAnswer() {
         emptySubmissionCount = 0;
 
         if (!timerActive) {
-            if (answer === "if anyone is able to decipher this text then you have found the first hint, the first hint is zxclosure") {
+            if (answer === "This is your first answer and hint ZXCLOSURE") {
                 result.textContent = "Correct! This must mean you aren't a noble member meaning no brainrot. Good luck with the riddle!";
             } else {
                 var randomIndex = Math.floor(Math.random() * failureMessages.length);
