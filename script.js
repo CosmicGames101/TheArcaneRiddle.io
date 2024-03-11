@@ -47,7 +47,7 @@ function checkAnswer() {
         emptySubmissionCount = 0;
 
         if (!timerActive) {
-            if (answer === "This is your first answer and hint ZXCLOSURE") {
+            if (answer === "this is your first answer and hint zxclosure") { // Correct answer string
                 result.textContent = "Correct! This must mean you aren't a noble member meaning no brainrot. Good luck with the riddle!";
             } else {
                 var randomIndex = Math.floor(Math.random() * failureMessages.length);
@@ -58,6 +58,7 @@ function checkAnswer() {
         }
     }
 }
+
 // Function to start the timer
 function startTimer() {
     timerActive = true;
