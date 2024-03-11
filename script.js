@@ -8,7 +8,7 @@ var failureMessages = [
 ];
 
 // Function to check the user's answer
-function checkAnswer(hint) {
+function checkAnswer() {
     var answer = document.getElementById("answer").value.toLowerCase();
     var result = document.getElementById("result");
 
@@ -19,15 +19,5 @@ function checkAnswer(hint) {
         // Randomly select a failure message
         var randomIndex = Math.floor(Math.random() * failureMessages.length);
         result.textContent = failureMessages[randomIndex];
-        
-        // If hint is provided, display it
-        if (hint) {
-            displayHint(hint);
-        }
     }
-}
-
-// Function to display the hint
-function displayHint(hint) {
-    alert("Hint: " + hint);
 }
