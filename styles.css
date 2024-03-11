@@ -64,6 +64,7 @@ button:hover {
 }
 
 #timer {
+    display: none; /* Initially hide the timer */
     color: #666;
     font-size: 18px;
     margin-top: 20px;
