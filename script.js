@@ -15,13 +15,12 @@ var timerActive = false;
 
 // Function to check the user's answer
 function checkAnswer() {
-    var answer = document.getElementById("answer").value.trim().toLowerCase(); // Trim whitespace
+    var answer = document.getElementById("answer").value.trim().toLowerCase();
     var result = document.getElementById("result");
 
     if (answer === "") {
         emptySubmissionCount++;
 
-        // Different messages for each empty submission up to 5 times
         if (emptySubmissionCount <= 5) {
             switch (emptySubmissionCount) {
                 case 1:
@@ -38,21 +37,19 @@ function checkAnswer() {
                     break;
                 case 5:
                     result.textContent = "Okay, that's enough.";
-                    startTimer();
+                    startTimer(); // Call startTimer function here
                     break;
                 default:
                     result.textContent = "I warned you.";
             }
         }
     } else {
-        emptySubmissionCount = 0; // Reset the count if answer is not empty
+        emptySubmissionCount = 0;
 
         if (!timerActive) {
             if (answer === "if anyone is able to decipher this text then you have found the first hint, the first hint is zxclosure") {
                 result.textContent = "Correct! This must mean you aren't a noble member meaning no brainrot. Good luck with the riddle!";
-                // Add logic here to navigate to the next riddle
             } else {
-                // Randomly select a failure message
                 var randomIndex = Math.floor(Math.random() * failureMessages.length);
                 result.textContent = failureMessages[randomIndex];
             }
@@ -61,7 +58,6 @@ function checkAnswer() {
         }
     }
 }
-
 // Function to start the timer
 function startTimer() {
     timerActive = true;
