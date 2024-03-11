@@ -28,20 +28,20 @@ function checkAnswer() {
                     result.textContent = "Please put an answer in the box.";
                     break;
                 case 2:
-                    result.textContent = "Come on, you can do better than that. Try again.";
+                    result.textContent = "Come on, you aren't this dumb are you?";
                     break;
                 case 3:
-                    result.textContent = "Seriously? Still no answer? You're not even trying.";
+                    result.textContent = "Seriously? Still no answer? ";
                     break;
                 case 4:
-                    result.textContent = "You're pushing it. Give me something to work with!";
+                    result.textContent = "You're pushing it. Im warning you!";
                     break;
                 case 5:
-                    result.textContent = "Okay, that's enough. Time to give up.";
+                    result.textContent = "Okay, that's enough.";
                     startTimer();
                     break;
                 default:
-                    result.textContent = "Please put an answer in the box.";
+                    result.textContent = "I warned you.";
             }
         }
     } else {
