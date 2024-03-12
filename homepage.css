@@ -14,18 +14,35 @@ body {
 
 /* Animation for green code */
 @keyframes greenCode {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
+    0% { transform: translateX(100%); opacity: 0; }
+    5% { opacity: 1; }
+    90%, 100% { transform: translateX(-100%); opacity: 0; }
 }
 
 /* Green code animation */
 .green-code {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    text-align: center;
-    line-height: 1.5; /* Adjust line height for better readability */
-    animation: greenCode 10s infinite; /* Change duration as needed */
+    text-align: left;
+    white-space: nowrap; /* Prevent wrapping of code lines */
+    font-size: 14px; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    opacity: 0;
+    animation: greenCode 30s linear infinite; /* Adjust duration and timing function as needed */
+    z-index: -1; /* Ensure the code animation is behind other content */
+}
+
+/* Individual code lines */
+.green-code-line {
+    padding-left: 10px; /* Add left padding for indentation effect */
+}
+
+/* Randomize opacity for each code line */
+.green-code-line:nth-child(odd) {
+    opacity: 0.7;
+}
+.green-code-line:nth-child(even) {
+    opacity: 0.5;
 }
